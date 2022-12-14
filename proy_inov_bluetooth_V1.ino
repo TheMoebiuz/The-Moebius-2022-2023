@@ -27,7 +27,8 @@ void loop() {
   Cu = 0;
   Pwm = 0;
   p = 0;
-
+  ps = "";
+  Pwms = "";
   if (mBT.available()) {
     Serial.println(mBT.read());
     lBT = mBT.read();
@@ -55,7 +56,7 @@ void loop() {
       Pwms = lBT.substring(3);
 
       p = String(ps).toInt();
-      p = String(Pwms).toInt();
+      Pwm = String(Pwms).toInt();
 
 
       switch (p) {
